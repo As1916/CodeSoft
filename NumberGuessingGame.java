@@ -7,8 +7,8 @@ public class NumberGuessingGame {
         try (Scanner scanner = new Scanner(System.in)) {
             Random random = new Random();
             
-            int totalScore = 0;
-            int roundsPlayed = 0;
+            int totalScore = 10;
+            int roundsPlayed = 10;
             boolean playAgain = true;
             
             System.out.println("Welcome to the Number Guessing Game!");
