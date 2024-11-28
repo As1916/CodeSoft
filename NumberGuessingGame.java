@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class NumberGuessingGame {
 
     public static void main(String[] args) {
@@ -15,8 +16,8 @@ public class NumberGuessingGame {
             
             while (playAgain) {
                 roundsPlayed++;
-                int numberToGuess = random.nextInt(100) + 1; // Step 1: Generate random number between 1 and 100
-                int maxAttempts = 10; // Step 5: Limit attempts
+                int numberToGuess = random.nextInt(100) + 1; 
+                int maxAttempts = 10; 
                 int attemptsUsed = 0;
                 boolean guessedCorrectly = false;
                 
@@ -34,32 +35,32 @@ public class NumberGuessingGame {
                         userGuess = Integer.parseInt(scanner.nextLine());
                     } catch (NumberFormatException e) {
                         System.out.println("Invalid input! Please enter a number.");
-                        attemptsUsed--; // Don't count invalid input as an attempt
+                        attemptsUsed--; 
                         continue;
                     }
                     
                     if (userGuess < numberToGuess) {
-                        System.out.println("Too low. Try again.");
+                        System.out.println("HINT : Too low. Try again.");
                     } else if (userGuess > numberToGuess) {
-                        System.out.println("Too high. Try again.");
+                        System.out.println("HINT: Too high. Try again.");
                     } else {
-                        System.out.println("Congratulations! You've guessed the number correctly in " + attemptsUsed + " attempts.");
+                        System.out.println("-----Congratulations!----- You've guessed the number correctly in " + attemptsUsed + " attempts.");
                         guessedCorrectly = true;
                         break;
                     }
                 }
                 
                 if (!guessedCorrectly) {
-                    System.out.println("Sorry, you've used all your attempts. The correct number was: " + numberToGuess);
+                    System.out.println("Sorry,  you've used all your attempts. The correct number was: " + numberToGuess);
                 }
                 
-                // Step 7: Update and display score
+                
                 int roundScore = guessedCorrectly ? Math.max(0, 10 - attemptsUsed) : 0;
                 totalScore += roundScore;
                 System.out.println("Your score for this round: " + roundScore);
                 System.out.println("Total score after " + roundsPlayed + " rounds: " + totalScore);
                 
-                // Step 6: Ask if the user wants to play again
+                
                 System.out.print("Do you want to play again? (yes/no): ");
                 String response = scanner.nextLine().trim().toLowerCase();
                 if (!response.equals("yes")) {
