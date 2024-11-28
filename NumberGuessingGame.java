@@ -25,7 +25,7 @@ public class NumberGuessingGame {
                 System.out.println("I have chosen a number between 1 and 100. Try to guess it!");
                 System.out.println("You have " + maxAttempts + " attempts.");
                 
-                // Step 2-4: Prompt user and check guesses
+                
                 while (attemptsUsed < maxAttempts) {
                     attemptsUsed++;
                     System.out.print("Attempt " + attemptsUsed + "/" + maxAttempts + " - Enter your guess: ");
