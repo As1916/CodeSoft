@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class StudentGradeCalculator {
     public static void main(String[] args) {
-<<<<<<< HEAD
+
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Enter the number of subjects: ");
             int numSubjects = scanner.nextInt();
@@ -35,7 +35,7 @@ public class StudentGradeCalculator {
             System.out.println("Average Percentage: " + averagePercentage + "%");
             System.out.println("Grade: " + grade);
         }
-=======
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of subjects: ");
@@ -70,6 +70,6 @@ public class StudentGradeCalculator {
         System.out.println("Grade: " + grade);
 
         scanner.close();
->>>>>>> 9602656ad383471d5676f946047da8a55d679ce0
+
     }
 }
